@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: zemin 3
+  m_Name: orman zemin 3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: dd3d930bdb5db7b4c9ae9cb2fb97405f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65776e2191efe8f45a63d2d6fcc22bdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
