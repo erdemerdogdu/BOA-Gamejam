@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Update ()
     {
-        anim.SetBool("isRunnig", isInChaseRange);
+        anim.SetBool("isRuning", isInChaseRange);
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRad, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, atttackRad, whatIsPlayer);
