@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 030140d7005caa54eaaca91c14e8aa00
+guid: de532d5272234f64c9a4a09c020c74d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: log_0
+      name: Chicken_Sprite_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,20 +118,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc01dbf7199f1a439036b9b782be12f
-      internalID: -793956712
+      spriteID: 284b64c2f870910478005f45b518e041
+      internalID: -669795003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_1
+      name: Chicken_Sprite_Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,20 +139,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83e767f05d81bb845a512827233f1019
-      internalID: 399327534
+      spriteID: fc3ce17fe31457f4fab1ba8fef1c6014
+      internalID: -1617421760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_2
+      name: Chicken_Sprite_Sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -160,20 +160,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab5558a9f6a1ca40a2e19add72b8c91
-      internalID: -1570314288
+      spriteID: 0e20921ded8b43b4a9dd05a9da0fe628
+      internalID: -2007959647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_3
+      name: Chicken_Sprite_Sheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -181,62 +181,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490443f764d19d34d8d6d1f307976655
-      internalID: 344793755
+      spriteID: 6aaec125b6a40fe47b87a27acfed8495
+      internalID: -360573950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10ecf4bab730e1544815e1f82d4250e0
-      internalID: 414963552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c58dff9ba7060104f85eb387421ece61
-      internalID: 1243809977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_6
+      name: Chicken_Sprite_Sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -244,20 +202,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f6818557d4c1049bf3c2f1c6ad63fe
-      internalID: -600856408
+      spriteID: 1ec5758b7fa59cf46a124ddb2b3933f4
+      internalID: 1524581078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_7
+      name: Chicken_Sprite_Sheet_5
       rect:
         serializedVersion: 2
         x: 32
@@ -265,20 +223,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dde1676ed8daeca4783d5345454af788
-      internalID: -20490221
+      spriteID: 6633e87a65fb7854182d9231f38ddb20
+      internalID: 1856297850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_8
+      name: Chicken_Sprite_Sheet_6
       rect:
         serializedVersion: 2
         x: 64
@@ -286,20 +244,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4492861f69de63d4ebb62ea7faf72e55
-      internalID: -970020261
+      spriteID: b93445c9869a90a4aa5637bacac82029
+      internalID: -741986751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_9
+      name: Chicken_Sprite_Sheet_7
       rect:
         serializedVersion: 2
         x: 96
@@ -307,62 +265,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe995a3664e53a842ad3b73f3aa785a2
-      internalID: 1175484036
+      spriteID: 0d924ae8591ba764da13a86313cd83a1
+      internalID: -1827403955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 911145d7daf070540a99e84dabdd3c1d
-      internalID: -1584732558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_11
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bc5e80894b974e44816a0bf37070ecd
-      internalID: 2085732854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_12
+      name: Chicken_Sprite_Sheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -370,20 +286,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c766cb0928f535b4bb36a806d7525aac
-      internalID: 1530934676
+      spriteID: 965700d8990f11d4fab539575fdc572f
+      internalID: 1292951714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_13
+      name: Chicken_Sprite_Sheet_9
       rect:
         serializedVersion: 2
         x: 32
@@ -391,20 +307,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0350c467bbf4f6418999a57709c6108
-      internalID: 1433801719
+      spriteID: 9f9de2f55b73ecb4a940127aace8f94c
+      internalID: 963774088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_14
+      name: Chicken_Sprite_Sheet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -412,20 +328,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c6139e2f65b11042a768cb11a1aa21d
-      internalID: 211891939
+      spriteID: 1a6c9a7c71fac9340830b7b394a25eda
+      internalID: 1077316611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_15
+      name: Chicken_Sprite_Sheet_11
       rect:
         serializedVersion: 2
         x: 96
@@ -433,62 +349,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9bbb84bcb0c7049a61ed7a8477355f
-      internalID: 1251914664
+      spriteID: 8445ecc9c7b90824f9cc5a47f914a069
+      internalID: 557201536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_16
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae49a70509cc0af4b972a62456502672
-      internalID: -1982798856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_17
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e0ae3479db26d441b9d8f64ff9a72bd
-      internalID: 1519454512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_18
+      name: Chicken_Sprite_Sheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -496,20 +370,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a57b75ce766f934da82e51ead799ee6
-      internalID: 83223789
+      spriteID: 6aec6048049e8fd43ab0b03c41d2b5b4
+      internalID: -1587731227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_19
+      name: Chicken_Sprite_Sheet_13
       rect:
         serializedVersion: 2
         x: 32
@@ -517,20 +391,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 883148d4837e8fb47bb7513a467e9140
-      internalID: 1131684895
+      spriteID: fce0379abc65c2e43b047ba3230bd274
+      internalID: 1233127277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_20
+      name: Chicken_Sprite_Sheet_14
       rect:
         serializedVersion: 2
         x: 64
@@ -538,20 +412,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d2d56443c56bb4ca5610306653de8f
-      internalID: -1726821762
+      spriteID: f0bad49f7b1e88549ad55b09687c8c70
+      internalID: 120488559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: log_21
+      name: Chicken_Sprite_Sheet_15
       rect:
         serializedVersion: 2
         x: 96
@@ -559,35 +433,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e086d849d100ba14cb9f043a60f3c6b4
-      internalID: -366682639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: log_22
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d595ae6b9a527b4fb267d1b9ae85aff
-      internalID: 1492291946
+      spriteID: b40f79add2c495543beeee50c4f7725a
+      internalID: -991063687
       vertices: []
       indices: 
       edges: []
@@ -603,29 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      log_0: -793956712
-      log_1: 399327534
-      log_10: -1584732558
-      log_11: 2085732854
-      log_12: 1530934676
-      log_13: 1433801719
-      log_14: 211891939
-      log_15: 1251914664
-      log_16: -1982798856
-      log_17: 1519454512
-      log_18: 83223789
-      log_19: 1131684895
-      log_2: -1570314288
-      log_20: -1726821762
-      log_21: -366682639
-      log_22: 1492291946
-      log_3: 344793755
-      log_4: 414963552
-      log_5: 1243809977
-      log_6: -600856408
-      log_7: -20490221
-      log_8: -970020261
-      log_9: 1175484036
+      Chicken_Sprite_Sheet_0: -669795003
+      Chicken_Sprite_Sheet_1: -1617421760
+      Chicken_Sprite_Sheet_10: 1077316611
+      Chicken_Sprite_Sheet_11: 557201536
+      Chicken_Sprite_Sheet_12: -1587731227
+      Chicken_Sprite_Sheet_13: 1233127277
+      Chicken_Sprite_Sheet_14: 120488559
+      Chicken_Sprite_Sheet_15: -991063687
+      Chicken_Sprite_Sheet_2: -2007959647
+      Chicken_Sprite_Sheet_3: -360573950
+      Chicken_Sprite_Sheet_4: 1524581078
+      Chicken_Sprite_Sheet_5: 1856297850
+      Chicken_Sprite_Sheet_6: -741986751
+      Chicken_Sprite_Sheet_7: -1827403955
+      Chicken_Sprite_Sheet_8: 1292951714
+      Chicken_Sprite_Sheet_9: 963774088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

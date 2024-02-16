@@ -39,6 +39,7 @@ public class EnemyAI : MonoBehaviour
 
         dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
         dir.Normalize();
         movement = dir;
         if (shouldRotate)
