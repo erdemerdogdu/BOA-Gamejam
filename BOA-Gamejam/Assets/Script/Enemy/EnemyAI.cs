@@ -60,7 +60,6 @@ public class EnemyAI : MonoBehaviour
         else if (isInAttackRange)
         {
             rb.velocity = Vector2.zero;
-            print("In Attack Range");
         }
     }
 
