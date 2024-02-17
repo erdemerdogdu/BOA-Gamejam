@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+    private BoxCollider2D bc;
     
     /* [SerializeField]
     private GameObject pFab;
@@ -41,6 +42,7 @@ public class PlayerStats : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         //spawnPoint = transform.position;
+        bc = GetComponent<BoxCollider2D>();
     }
 
     public void DealDamage(float damage)
@@ -96,4 +98,9 @@ public class PlayerStats : MonoBehaviour
     {
         Destroy(player);
     } */
+
+    private void CloseCol()
+    {
+        bc.enabled = false;
+    }
 }

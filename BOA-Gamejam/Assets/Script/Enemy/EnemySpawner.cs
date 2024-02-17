@@ -10,7 +10,6 @@ public class EnemySpawner : MonoBehaviour
     public Vector3 spawnPoint;
     [SerializeField]
     private float enemyInterval = 3.5f;
-    public Vector3 spawnPoint;
     public float spawnRadius;
     public int MaxCount;
 
