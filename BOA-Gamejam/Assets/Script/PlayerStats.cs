@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class PlayerStats : MonoBehaviour
     
     public float health;
     public float maxHealth;
+    public float damageTaken;
 
+    private Rigidbody2D rb;
+    private Animator anim;
+    
     void Awake()
     {
         if (playerStats != null)
@@ -28,6 +33,8 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     public void DealDamage(float damage)
@@ -36,6 +43,16 @@ public class PlayerStats : MonoBehaviour
         CheckDeath();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            DealDamage(damageTaken);
+        }
+        // for further usage: if the enemy sends a projectile, take this block of code to enemy and destroy projectile on hit
+        //Destroy(gameObject);
+    }
+    
     public void HealCharacter(float heal)
     {
         health += heal;
@@ -54,7 +71,21 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(player);
+            //Destroy(player);
+            rb.bodyType = RigidbodyType2D.Static;
+            anim.SetTrigger("death");
+            // DEATH ANIMATION WILL CALL THE RESTART
+            //RestartLevel();
         }
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void DestroyPlayer()
+    {
+        Destroy(gameObject);
     }
 }
