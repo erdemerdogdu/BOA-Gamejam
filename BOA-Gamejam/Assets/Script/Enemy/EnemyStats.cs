@@ -1,0 +1,90 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class EnemyStats : MonoBehaviour
+{
+    public static EnemyStats enemyStats;
+
+    public GameObject player;
+
+    public float health;
+    public float maxHealth;
+    public float damageTaken;
+
+    private Rigidbody2D rb;
+    private Animator anim;
+
+    //void Awake()
+    //{
+    //    if (enemyStats != null)
+    //    {
+    //        Destroy(enemyStats);
+    //    }
+    //    else
+    //    {
+    //        enemyStats = this;
+    //    }
+    //    DontDestroyOnLoad(this);
+    //}
+
+    void Start()
+    {
+        health = maxHealth;
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+
+    public void DealDamage(float damage)
+    {
+        health -= damage;
+        CheckDeath();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            DealDamage(damageTaken);
+        }
+        // for further usage: if the enemy sends a projectile, take this block of code to enemy and destroy projectile on hit
+        //Destroy(gameObject);
+    }
+
+    public void HealCharacter(float heal)
+    {
+        health += heal;
+        CheckOverheal();
+    }
+
+    private void CheckOverheal()
+    {
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
+
+    private void CheckDeath()
+    {
+        if (health <= 0)
+        {
+            //Destroy(player);
+            rb.bodyType = RigidbodyType2D.Static;
+            anim.SetTrigger("death");
+            // DEATH ANIMATION WILL CALL THE RESTART
+            //RestartLevel();
+        }
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void DestroyPlayer()
+    {
+        Destroy(gameObject);
+    }
+}

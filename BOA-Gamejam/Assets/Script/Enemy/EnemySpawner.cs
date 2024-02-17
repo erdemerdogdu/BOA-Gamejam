@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float enemyInterval = 3.5f;
     public Vector3 spawnPoint;
+    public float spawnRadius;
     public int MaxCount;
 
 
@@ -23,8 +24,9 @@ public class EnemySpawner : MonoBehaviour
     {
         if (MaxCount != 1)
         {
+            
             yield return new WaitForSeconds(interval);
-            GameObject newEnemy = Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
+            GameObject newEnemy = Instantiate(enemyPrefab, new Vector3(Random.Range(20f, -20), Random.Range(20f, -20f), 0f), Quaternion.identity);
             StartCoroutine(spawnEnemy(enemyInterval, enemyPrefab));
             MaxCount--;
         }
