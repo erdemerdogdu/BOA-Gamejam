@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     public float speed;
     public float checkRad;
-    public float atttackRad;
+    public float attackRad;
 
     public bool shouldRotate;
 
@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
         anim.SetBool("isRuning", isInChaseRange);
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRad, whatIsPlayer);
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, atttackRad, whatIsPlayer);
+        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRad, whatIsPlayer);
 
 
         dir = target.position - transform.position;
@@ -47,19 +47,20 @@ public class EnemyAI : MonoBehaviour
         if (shouldRotate)
         {
             anim.SetFloat("x", dir.x);
-            anim.SetFloat("y", dir.y);
+            //anim.SetFloat("y", dir.y);
         }
     }
 
     private void FixedUpdate()
     {
-        if (isInAttackRange && isInChaseRange)
+        if (!isInAttackRange && isInChaseRange)
         {
             MoveCharacter(movement);
         }
-        if (isInAttackRange)
+        else if (isInAttackRange)
         {
             rb.velocity = Vector2.zero;
+            print("In Attack Range");
         }
     }
 
