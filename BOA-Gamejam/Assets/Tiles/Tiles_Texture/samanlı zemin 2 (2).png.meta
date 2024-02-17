@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:BOA-Gamejam/Assets/Tiles/Tiles_Texture/Envoirement/boulder 3.png.meta
-guid: b6f992ac41094274c96f4f0d97e34daa
-========
-guid: 937b7252dacc53d4e8b74ff53b9a265c
->>>>>>>> Stashed changes:BOA-Gamejam/Assets/Tiles/Tiles_Texture/yemek kaplı kümes.png.meta
+guid: c86d7e6ee34c7ff4981e0bea6304a16a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "samanl\u0131 zemin 2 (2)_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fef3ba9e7cc49949969b3e3139c9b64
+      internalID: 695775907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "samanl\u0131 zemin 2 (2)_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33abbaf0688be24409a342e0f83aae15
+      internalID: -21296666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "samanl\u0131 zemin 2 (2)_2"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4691e61003871840a1421fdac1abd5d
+      internalID: -60360052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -123,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "samanl\u0131 zemin 2 (2)_0": 695775907
+      "samanl\u0131 zemin 2 (2)_1": -21296666
+      "samanl\u0131 zemin 2 (2)_2": -60360052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
