@@ -283,11 +283,40 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7910646170870668680, guid: ce3d2457a8d3a984f9a78970be38ed9a, type: 3}
       insertIndex: -1
+<<<<<<< Updated upstream:BOA-Gamejam/Assets/Prefab/PlayerWithArrow.prefab
       addedObject: {fileID: 19547870745194991}
     m_AddedComponents: []
+=======
+      addedObject: {fileID: 4853835911894637874}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5637976885347237185, guid: ce3d2457a8d3a984f9a78970be38ed9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4160803170350034579}
+>>>>>>> Stashed changes:BOA-Gamejam/Assets/Prefab/PlayerWithArrow Variant.prefab
   m_SourcePrefab: {fileID: 100100000, guid: ce3d2457a8d3a984f9a78970be38ed9a, type: 3}
 --- !u!4 &5444861453554928101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7910646170870668680, guid: ce3d2457a8d3a984f9a78970be38ed9a, type: 3}
   m_PrefabInstance: {fileID: 2763040162481378413}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7126434232084155460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5637976885347237185, guid: ce3d2457a8d3a984f9a78970be38ed9a, type: 3}
+  m_PrefabInstance: {fileID: 3231385741803352325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4160803170350034579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126434232084155460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945341198b798c3418d15f9782841cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7126434232084155460}
+  health: 0
+  maxHealth: 500
+  damageTaken: 25
