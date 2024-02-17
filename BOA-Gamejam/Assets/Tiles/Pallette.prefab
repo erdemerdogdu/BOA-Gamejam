@@ -87,7 +87,6 @@ Tilemap:
   m_GameObject: {fileID: 6009989833127802920}
   m_Enabled: 1
   m_Tiles:
-<<<<<<< Updated upstream
   - first: {x: -1, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -142,19 +141,12 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 31
-=======
-  - first: {x: -2, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 5
->>>>>>> Stashed changes
       m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-<<<<<<< Updated upstream
   - first: {x: 12, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -169,19 +161,12 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 34
-=======
-  - first: {x: 0, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
->>>>>>> Stashed changes
       m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-<<<<<<< Updated upstream
   - first: {x: 15, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -377,33 +362,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 11
       m_TileSpriteIndex: 24
-=======
-  - first: {x: 1, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -1, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
->>>>>>> Stashed changes
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -412,7 +370,6 @@ Tilemap:
   - first: {x: 0, y: -2, z: 0}
     second:
       serializedVersion: 2
-<<<<<<< Updated upstream
       m_TileIndex: 3
       m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
@@ -475,10 +432,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 26
       m_TileSpriteIndex: 15
-=======
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
->>>>>>> Stashed changes
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -660,7 +613,6 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 0}
   - m_RefCount: 1
-<<<<<<< Updated upstream
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 0}
@@ -746,21 +698,6 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ba39bf93e78e93448b806f01774d03ef, type: 2}
-=======
-    m_Data: {fileID: 11400000, guid: ecd0072ac59073541825dde416f36a1a, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 8207fe35f04feb544a5edda19b777b32, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: cc9d90a2376a1d2438622d0ba92fc96e, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 78ccdec71f43783428a29d5dbc8f9bd5, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 2f85df9b898e3c2448ff890f853539fc, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 4870a51dcd7b59f4eaf9af15ca59901e, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 5c0ae21b125ea074db64307ac6da6987, type: 2}
->>>>>>> Stashed changes
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: c488e8b81b62bb446b39c34da7a637a3, type: 3}
@@ -841,7 +778,6 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: e54d321efb6b05a4181b36182ab58a33, type: 3}
   - m_RefCount: 1
-<<<<<<< Updated upstream
     m_Data: {fileID: 21300000, guid: 65776e2191efe8f45a63d2d6fcc22bdb, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 9dce521532d266042be9881f01a68b8e, type: 3}
@@ -855,23 +791,6 @@ Tilemap:
     m_Data: {fileID: -1438417643, guid: 0d0b49ca986dcc64abaab959aa4d9aa1, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 51
-=======
-    m_Data: {fileID: 21300000, guid: dd3d930bdb5db7b4c9ae9cb2fb97405f, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 30a797118e7f4a24bb6241fe040ac09e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: d0f1838a4c0783a48994ca0ac7cd056b, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 937b7252dacc53d4e8b74ff53b9a265c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 695775907, guid: c86d7e6ee34c7ff4981e0bea6304a16a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -21296666, guid: c86d7e6ee34c7ff4981e0bea6304a16a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -60360052, guid: c86d7e6ee34c7ff4981e0bea6304a16a, type: 3}
-  m_TileMatrixArray:
-  - m_RefCount: 9
->>>>>>> Stashed changes
     m_Data:
       e00: 1
       e01: 0
@@ -890,11 +809,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-<<<<<<< Updated upstream
   - m_RefCount: 41
-=======
-  - m_RefCount: 9
->>>>>>> Stashed changes
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
     m_Data: {r: 0.8398442, g: 0.41632, b: 0.54135823, a: 1}
@@ -917,13 +832,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< Updated upstream
   m_Origin: {x: -4, y: -6, z: 0}
   m_Size: {x: 23, y: 9, z: 1}
-=======
-  m_Origin: {x: -2, y: -3, z: 0}
-  m_Size: {x: 4, y: 4, z: 1}
->>>>>>> Stashed changes
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -992,11 +902,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
-<<<<<<< Updated upstream
 --- !u!114 &2174757459385232548
-=======
---- !u!114 &4345589037285493307
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
