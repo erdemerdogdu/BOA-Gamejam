@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 117822983044712585}
   - component: {fileID: -3789603434599224713}
   - component: {fileID: 657978439682582013}
-  m_Layer: 0
+  - component: {fileID: 1446016084837192236}
+  m_Layer: 8
   m_Name: Spell
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,8 +149,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523f538b3aaa04c479009ec1a8717df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
-  parent: {fileID: 0}
+  velocity: 10
+--- !u!58 &1446016084837192236
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2407487510009980959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &7810333541859107881
 GameObject:
   m_ObjectHideFlags: 0

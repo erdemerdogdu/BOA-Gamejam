@@ -6,6 +6,8 @@ public class CollectSystem : MonoBehaviour
 {
     bool Pressed = false;
     int cnt = 0;
+    [SerializeField]
+    private GameObject player;
 
     private void OnMouseDown()
     {
