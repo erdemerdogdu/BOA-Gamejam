@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4652185450757657871}
   - component: {fileID: 7073924090220946516}
   - component: {fileID: 3067790430298770836}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cock
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,13 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-<<<<<<< Updated upstream
   checkRad: 20
   attackRad: 0.5
-=======
-  checkRad: 50
-  attackRad: 0
->>>>>>> Stashed changes
   shouldRotate: 1
   whatIsPlayer:
     serializedVersion: 2
@@ -174,7 +169,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 64
