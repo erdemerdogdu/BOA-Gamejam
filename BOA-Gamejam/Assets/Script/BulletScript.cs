@@ -7,7 +7,6 @@ public class BulletScript : MonoBehaviour
     private Vector3 mousePos;
     private Rigidbody2D rb;
     public float velocity;
-    public GameObject parent;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +25,15 @@ public class BulletScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject && !collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+        // for further usage: if the enemy sends a projectile, take this block of code to enemy and destroy projectile on hit
+        //Destroy(gameObject);
     }
 }

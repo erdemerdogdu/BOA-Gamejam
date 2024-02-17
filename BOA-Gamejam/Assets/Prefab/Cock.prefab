@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4652185450757657871}
   - component: {fileID: 7073924090220946516}
   - component: {fileID: 3067790430298770836}
-  m_Layer: 0
+  - component: {fileID: 6838822780962626828}
+  m_Layer: 7
   m_Name: Cock
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +173,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -192,3 +193,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8125
+--- !u!114 &6838822780962626828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841995507070377959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e29d1520c11545ace56fed16666b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7841995507070377959}
+  health: 0
+  maxHealth: 30
+  damageTaken: 15
