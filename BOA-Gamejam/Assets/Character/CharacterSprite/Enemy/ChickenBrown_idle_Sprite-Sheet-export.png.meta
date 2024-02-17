@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3da745c77155dcb44af2ee6f1c4115de
+guid: 5750c1459fdacd74cb0ef4f340ca5850
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,265 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tavuuuuk 4_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e035b1da2be0329478644dd630d94efe
-      internalID: -1101390188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e4a75f4b0835a947a5afc355bb3b813
-      internalID: -176266635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38426e5fee4c5d14c8cba9d7f9c83f0d
-      internalID: 1777186554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb415303caedda0438a592172b8679d4
-      internalID: 458930933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cf802eca72aeb349a4c539d8f363048
-      internalID: 1989607526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da17c8fe2ab900e46bbd56c92191cf97
-      internalID: 716251287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87952fc686743234885105a94313f0d5
-      internalID: 1789351916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c136bf3a682f7f4ca0cbdf93680da32
-      internalID: 885244990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 565f8a9773bab024f9b271cf71590044
-      internalID: -1336029286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_9
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60365552a7e4ad44481f705ae1d316c6
-      internalID: -1589390914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cda051fb210770845a76809abd0166d2
-      internalID: 1231341564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54a1dc564ed57e34f9e263f2d8f07e78
-      internalID: -141844437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tavuuuuk 4_12
+      name: ChickenBrown_idle_Sprite-Sheet-export_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 690b2ba4a5093d04288bdae5d5ce7d7b
-      internalID: -1307953757
+      spriteID: bfc63118218a78541844e1ef4402070a
+      internalID: -466496020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tavuuuuk 4_13
+      name: ChickenBrown_idle_Sprite-Sheet-export_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 320
         y: 0
-        width: 32
-        height: 32
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9b9f9b5027759641b3f2344282edb80
-      internalID: -1840316149
+      spriteID: 0407d8abcc0773d4ba2628a3f715aeac
+      internalID: 695624884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tavuuuuk 4_14
+      name: ChickenBrown_idle_Sprite-Sheet-export_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 640
         y: 0
-        width: 32
-        height: 32
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1b59edb69af2d944b5de1393220a8c0
-      internalID: 1357863735
+      spriteID: feb5e1547dc825e4db64398c8ad33d8c
+      internalID: 1503678893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tavuuuuk 4_15
+      name: ChickenBrown_idle_Sprite-Sheet-export_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 960
         y: 0
-        width: 32
-        height: 32
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,8 +187,260 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ac9eca0dc0f87749b2f979829364d94
-      internalID: 359398900
+      spriteID: 593da947bd51baf4ab5c1c900931f741
+      internalID: -2052244984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e907a229e1a20fc4d9e713600356141b
+      internalID: -729483055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11316b7a9207bf49b9529dcde3d29a4
+      internalID: 138108092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d09951299406714683a3f4cf19317ae
+      internalID: 1480074056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_7
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae520dc461d38a42aac213261cfcf8f
+      internalID: -1894111800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_8
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52489feed3c32814f9333976b10a61c9
+      internalID: -62740724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_9
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea45ab6e4642f8a4e93addbf57ac13fe
+      internalID: -1151526415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_10
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1239dd224837ee841951ac59b172d30f
+      internalID: 134903215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_11
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bf6aa2effb2564fa7bcd337e1e59ef
+      internalID: -1733208666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6d8b1c6b08ed5419052a1e0942f307
+      internalID: 404618533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_13
+      rect:
+        serializedVersion: 2
+        x: 4160
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32a2aebfaf27b44fa64810adb0c0867
+      internalID: 1960737199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_14
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8eb19d933630c442b0d23a73d095351
+      internalID: -104704434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChickenBrown_idle_Sprite-Sheet-export_15
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de30e42c6c826d448495045c07fd995
+      internalID: 1504608014
       vertices: []
       indices: 
       edges: []
@@ -456,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tavuuuuk 4_0: -1101390188
-      tavuuuuk 4_1: -176266635
-      tavuuuuk 4_10: 1231341564
-      tavuuuuk 4_11: -141844437
-      tavuuuuk 4_12: -1307953757
-      tavuuuuk 4_13: -1840316149
-      tavuuuuk 4_14: 1357863735
-      tavuuuuk 4_15: 359398900
-      tavuuuuk 4_2: 1777186554
-      tavuuuuk 4_3: 458930933
-      tavuuuuk 4_4: 1989607526
-      tavuuuuk 4_5: 716251287
-      tavuuuuk 4_6: 1789351916
-      tavuuuuk 4_7: 885244990
-      tavuuuuk 4_8: -1336029286
-      tavuuuuk 4_9: -1589390914
+      ChickenBrown_idle_Sprite-Sheet-export_0: -466496020
+      ChickenBrown_idle_Sprite-Sheet-export_1: 695624884
+      ChickenBrown_idle_Sprite-Sheet-export_10: 134903215
+      ChickenBrown_idle_Sprite-Sheet-export_11: -1733208666
+      ChickenBrown_idle_Sprite-Sheet-export_12: 404618533
+      ChickenBrown_idle_Sprite-Sheet-export_13: 1960737199
+      ChickenBrown_idle_Sprite-Sheet-export_14: -104704434
+      ChickenBrown_idle_Sprite-Sheet-export_15: 1504608014
+      ChickenBrown_idle_Sprite-Sheet-export_2: 1503678893
+      ChickenBrown_idle_Sprite-Sheet-export_3: -2052244984
+      ChickenBrown_idle_Sprite-Sheet-export_4: -729483055
+      ChickenBrown_idle_Sprite-Sheet-export_5: 138108092
+      ChickenBrown_idle_Sprite-Sheet-export_6: 1480074056
+      ChickenBrown_idle_Sprite-Sheet-export_7: -1894111800
+      ChickenBrown_idle_Sprite-Sheet-export_8: -62740724
+      ChickenBrown_idle_Sprite-Sheet-export_9: -1151526415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

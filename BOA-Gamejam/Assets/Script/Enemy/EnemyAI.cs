@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
 
 
     public LayerMask whatIsPlayer;
+    public bool isExcape;
 
     private Transform target;
     private Rigidbody2D rb;
@@ -36,6 +37,7 @@ public class EnemyAI : MonoBehaviour
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRad, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, atttackRad, whatIsPlayer);
+
 
         dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -63,7 +65,14 @@ public class EnemyAI : MonoBehaviour
 
     private void MoveCharacter(Vector2 dir)
     {
-        rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+        if (!isExcape)
+        {
+            rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+        }
+        else
+        {
+            rb.MovePosition((Vector2)transform.position + (-dir * speed * Time.deltaTime));
+        }
     }
 
 }
