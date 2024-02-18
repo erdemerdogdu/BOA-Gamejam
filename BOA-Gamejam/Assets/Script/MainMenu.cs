@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        levelChanger.FadeToLevel(2);
+        levelChanger.FadeToLevel(1);
     }
 
     public void ExitGame()

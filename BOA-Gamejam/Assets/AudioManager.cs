@@ -9,13 +9,38 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource;
 
     [Header("---------- Audio Source ----------")]
-    [SerializeField] AudioClip mainMusic;
-    [SerializeField] AudioClip music30s;
-    [SerializeField] AudioClip mainMusicLoop;
+    public AudioClip mainMusic;
+    public AudioClip music30s;
+    public AudioClip mainMusicLoop;
 
+    [Header("---------- SFX Source ----------")]
+    public AudioClip characterDeathIn;
+    public AudioClip characterDeathOut;
+    public AudioClip enemyDeath;
+
+    public static AudioManager instance;
+
+    //private void Awake()
+    //{
+    //    if(instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
     private void Start()
     {
-        musicSource.clip = mainMusic;
+        musicSource.clip = music30s;
         musicSource.Play();
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
+        Debug.Log("Played clip: " + clip.name);
     }
 }

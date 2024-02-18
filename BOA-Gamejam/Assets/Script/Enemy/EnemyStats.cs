@@ -9,9 +9,13 @@ public class EnemyStats : MonoBehaviour
     public Animator animator;
     public GameObject player;
 
+    AudioManager audioManager;
+
     public float health;
     public float maxHealth;
     public float damageTaken;
+
+    public bool isAlive = true;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -35,7 +39,9 @@ public class EnemyStats : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         animator = GetComponent<Animator>();
-        
+
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void DealDamage(float damage)
@@ -77,6 +83,12 @@ public class EnemyStats : MonoBehaviour
         {
             //Destroy(player);
             rb.bodyType = RigidbodyType2D.Static;
+            if (isAlive)
+            {
+                audioManager.PlaySFX(audioManager.enemyDeath);
+            }
+            isAlive = false;
+            
             anim.SetTrigger("death");
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
@@ -91,7 +103,6 @@ public class EnemyStats : MonoBehaviour
     private void DestroyPlayer()
     {
         Destroy(gameObject);
-        print("Dead");
     }
 
 
