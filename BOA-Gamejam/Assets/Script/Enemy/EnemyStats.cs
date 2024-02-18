@@ -10,7 +10,6 @@ public class EnemyStats : MonoBehaviour
     public GameObject player;
 
     AudioManager audioManager;
-    public GameObject player;
     private CircleCollider2D bc;
 
     public float health;
