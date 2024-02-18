@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -9,17 +11,16 @@ public class Shooting : MonoBehaviour
 
     public GameObject bullet;
     public Transform bulletTransform;
-    public bool canFire;
+    public static bool CanFire;
+    public static bool isDead = false;
     private float timer;
     public float timeBetweenFiring;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        isDead = false;
     }
 
-    // Update is called once per frame 
     void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -29,20 +30,29 @@ public class Shooting : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        if(!canFire)
+        if (!isDead)
         {
-            timer += Time.deltaTime;
-            if(timer > timeBetweenFiring)
+            if(!CanFire)
             {
-                canFire = true;
-                timer = 0;
+                timer += Time.deltaTime;
+                if(timer > timeBetweenFiring)
+                {
+                    CanFire = true;
+                    timer = 0;
+                }
+            }
+
+            if (Input.GetMouseButton(0) && CanFire)
+            {
+                CanFire = false;
+                Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             }
         }
-
-        if (Input.GetMouseButton(0) && canFire)
+        else
         {
-            canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            return;
         }
+        
+        
     }
 }

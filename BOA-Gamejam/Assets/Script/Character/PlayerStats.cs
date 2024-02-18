@@ -16,8 +16,14 @@ public class PlayerStats : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+    private BoxCollider2D bc;
     
-    void Awake()
+    /* [SerializeField]
+    private GameObject pFab;
+    [SerializeField]
+    public Vector3 spawnPoint; */
+    
+    /* void Awake()
     {
         if (playerStats != null)
         {
@@ -28,13 +34,15 @@ public class PlayerStats : MonoBehaviour
             playerStats = this;
         }
         DontDestroyOnLoad(this);
-    }
+    } */
 
     void Start()
     {
         health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        //spawnPoint = transform.position;
+        bc = GetComponent<BoxCollider2D>();
     }
 
     public void DealDamage(float damage)
@@ -74,6 +82,7 @@ public class PlayerStats : MonoBehaviour
             //Destroy(player);
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("death");
+            Shooting.isDead = true;
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
         }
@@ -81,11 +90,17 @@ public class PlayerStats : MonoBehaviour
 
     private void RestartLevel()
     {
+        //GameObject newPlayer = Instantiate(gameObject, spawnPoint, Quaternion.identity);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void DestroyPlayer()
+    /* private void DestroyPlayer()
     {
-        Destroy(gameObject);
+        Destroy(player);
+    } */
+
+    private void CloseCol()
+    {
+        bc.enabled = false;
     }
 }
