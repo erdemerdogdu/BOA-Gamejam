@@ -17,32 +17,16 @@ public class PlayerStats : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private BoxCollider2D bc;
-    
-    /* [SerializeField]
-    private GameObject pFab;
-    [SerializeField]
-    public Vector3 spawnPoint; */
-    
-    /* void Awake()
-    {
-        if (playerStats != null)
-        {
-            Destroy(playerStats);
-        }
-        else
-        {
-            playerStats = this;
-        }
-        DontDestroyOnLoad(this);
-    } */
+
+    public HealthManager hm;
 
     void Start()
     {
         health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //spawnPoint = transform.position;
         bc = GetComponent<BoxCollider2D>();
+        hm.SetMaxHealth((int)maxHealth);
     }
 
     public void DealDamage(float damage)
@@ -57,8 +41,6 @@ public class PlayerStats : MonoBehaviour
         {
             DealDamage(damageTaken);
         }
-        // for further usage: if the enemy sends a projectile, take this block of code to enemy and destroy projectile on hit
-        //Destroy(gameObject);
     }
     
     public void HealCharacter(float heal)
@@ -79,28 +61,27 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            //Destroy(player);
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("death");
             Shooting.isDead = true;
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
+            hm.SetHealth((int)health);
+        }
+        else
+        {
+            hm.SetHealth((int)health);
         }
     }
 
     private void RestartLevel()
     {
-        //GameObject newPlayer = Instantiate(gameObject, spawnPoint, Quaternion.identity);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    /* private void DestroyPlayer()
-    {
-        Destroy(player);
-    } */
 
     private void CloseCol()
     {
         bc.enabled = false;
     }
+
 }
