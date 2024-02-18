@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    public LevelChanger levelChanger;
+    [SerializeField]
+
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        levelChanger.FadeToLevel(1);
     }
 
     public void ExitGame()
