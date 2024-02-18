@@ -20,20 +20,7 @@ public class EnemyStats : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
-
-    //void Awake()
-    //{
-    //    if (enemyStats != null)
-    //    {
-    //        Destroy(enemyStats);
-    //    }
-    //    else
-    //    {
-    //        enemyStats = this;
-    //    }
-    //    DontDestroyOnLoad(this);
-    //}
-
+    
     void Start()
     {
         health = maxHealth;
@@ -90,7 +77,6 @@ public class EnemyStats : MonoBehaviour
             isAlive = false;
             
             anim.SetTrigger("death");
-            Destroy(gameObject);
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
         }
