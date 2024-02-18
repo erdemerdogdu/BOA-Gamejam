@@ -1170,6 +1170,18 @@ PrefabInstance:
       propertyPath: hm
       value: 
       objectReference: {fileID: 1997324330}
+    - target: {fileID: 5677431469234518670, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677431469234518670, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
+      propertyPath: damageTaken
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691177796629629334, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
+      propertyPath: orthographic size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7910646170870668680, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03579569
@@ -1209,6 +1221,10 @@ PrefabInstance:
     - target: {fileID: 7910646170870668680, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828071915412266491, guid: 725941efcdb3d4f4f8720efdc11deab7, type: 3}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34340,3 +34356,4 @@ SceneRoots:
   - {fileID: 1251511586}
   - {fileID: 1644302754}
   - {fileID: 627755646}
+  - {fileID: 1644302754}
