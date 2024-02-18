@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    [SerializeField] private Texture2D[] cursorTextureArray;
-    [SerializeField] private int frameCount;
-    [SerializeField] private float frameRate;
+    public static CursorManager Instance { get; private set; }
 
     [SerializeField] private List<CursorAnimation> cursorAnimList;
 
+    private CursorAnimation cursorAnimation;
+
     private int currentFrame;
     private float frameTimer;
+    private int frameCount;
 
     public enum CursorType
     {
         Aim,
         Grab
     }
-    
+
+    public void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
-        Cursor.SetCursor(cursorTextureArray[0], new Vector2(48, 48), CursorMode.ForceSoftware);
+        SetActiveCursorType(CursorType.Aim);
     }
 
     private void Update()
@@ -29,10 +35,33 @@ public class CursorManager : MonoBehaviour
         frameTimer -= Time.deltaTime;
         if (frameTimer <= 0f)
         {
-            frameTimer += frameRate;
+            frameTimer += cursorAnimation.frameRate;
             currentFrame = (currentFrame + 1) % frameCount;
-            Cursor.SetCursor(cursorTextureArray[currentFrame], new Vector2(48, 48), CursorMode.ForceSoftware);
+            Cursor.SetCursor(cursorAnimation.textureArray[currentFrame], cursorAnimation.offset, CursorMode.Auto);
         }
+    }
+
+    public void SetActiveCursorType(CursorType cursorType)
+    {
+        SetActiveCursorAnim(GetCursorAnimation(cursorType));
+    }
+
+    private CursorAnimation GetCursorAnimation(CursorType cursorType)
+    {
+        foreach(CursorAnimation cursorAnimation in cursorAnimList)
+        {
+            if (cursorAnimation.cursorType == cursorType) return cursorAnimation;
+        }
+
+        return null;
+    }
+
+    private void SetActiveCursorAnim(CursorAnimation animation)
+    {
+        this.cursorAnimation = animation;
+        currentFrame = 0;
+        frameTimer = animation.frameRate;
+        frameCount = animation.textureArray.Length;
     }
 
     [System.Serializable]
