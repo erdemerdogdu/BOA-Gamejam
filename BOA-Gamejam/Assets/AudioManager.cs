@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
     //}
     private void Start()
     {
-        musicSource.clip = mainMusic;
+        musicSource.clip = music30s;
         musicSource.Play();
     }
 
