@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Tutorial : MonoBehaviour
+public class Trigger3 : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] private GameObject lc;
@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<PlayerStats>().eggCnt == 4)
+        if (player.GetComponent<PlayerStats>().killCnt == 30)
         {
             //lc.GetComponent<LevelChanger>().FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -27,7 +27,7 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator NextScene()
     {
-        yield return new WaitForSeconds(30.0f);
+        yield return new WaitForSeconds(120.0f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

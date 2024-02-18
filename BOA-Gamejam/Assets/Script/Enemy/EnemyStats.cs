@@ -29,6 +29,8 @@ public class EnemyStats : MonoBehaviour
         animator = GetComponent<Animator>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         bc = GetComponent<CircleCollider2D>();
+        this.player = GameObject.FindWithTag("Player");
+
     }
 
     public void DealDamage(float damage)
@@ -102,6 +104,7 @@ public class EnemyStats : MonoBehaviour
     private void CloseCol()
     {
         bc.enabled = false;
+        player.GetComponent<PlayerStats>().killCnt +=1 ;
     }
 
 }

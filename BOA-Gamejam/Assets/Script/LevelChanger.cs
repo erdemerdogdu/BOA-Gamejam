@@ -8,11 +8,20 @@ public class LevelChanger : MonoBehaviour
 {
     public Animator animator;
     private int levelToLoad;
+    private GameObject player;
+
+    private void Start()
+    {
+        this.player = GameObject.FindWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (player.GetComponent<PlayerStats>().killCnt == 60)
+        {
+            FadeToLevel(0);
+        }
     }
 
     public void FadeToLevel(int levelNo)

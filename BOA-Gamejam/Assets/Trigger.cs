@@ -19,7 +19,7 @@ public class Trigger : MonoBehaviour
 
     IEnumerator NextScene()
     {
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(5.0f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

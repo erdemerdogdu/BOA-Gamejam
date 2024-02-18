@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CollectSystem : MonoBehaviour
 {
-    public GameObject playerPrefab;
     [SerializeField] private CursorManager.CursorType cursorType;
     bool Pressed = false;
 
@@ -23,7 +22,7 @@ public class CollectSystem : MonoBehaviour
         Pressed = true;
         emptyChance = Random.Range(0.0f, 1.0f);
         anim.SetTrigger("Oppen");
-
+        player.GetComponent<PlayerStats>().eggCnt += 1;
         
         
         

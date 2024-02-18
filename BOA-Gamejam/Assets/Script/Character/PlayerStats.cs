@@ -18,6 +18,8 @@ public class PlayerStats : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private BoxCollider2D bc;
+    public int eggCnt = 0;
+    public int killCnt = 0;
 
     public HealthManager hm;
 
