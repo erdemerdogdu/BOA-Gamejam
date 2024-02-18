@@ -10,6 +10,8 @@ public class EnemyStats : MonoBehaviour
     public GameObject player;
 
     AudioManager audioManager;
+    public GameObject player;
+    private CircleCollider2D bc;
 
     public float health;
     public float maxHealth;
@@ -39,9 +41,8 @@ public class EnemyStats : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         animator = GetComponent<Animator>();
-
-
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        bc = GetComponent<CircleCollider2D>();
     }
 
     public void DealDamage(float damage)
@@ -110,6 +111,11 @@ public class EnemyStats : MonoBehaviour
     {
         if (health > 0)
             rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void CloseCol()
+    {
+        bc.enabled = false;
     }
 
 }
