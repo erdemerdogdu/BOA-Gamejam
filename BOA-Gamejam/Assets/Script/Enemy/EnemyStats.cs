@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 public class EnemyStats : MonoBehaviour
 {
     public static EnemyStats enemyStats;
-
+    public Animator animator;
     public GameObject player;
+
+    AudioManager audioManager;
+    private CircleCollider2D bc;
 
     public float health;
     public float maxHealth;
     public float damageTaken;
+
+    public bool isAlive = true;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -34,12 +39,18 @@ public class EnemyStats : MonoBehaviour
         health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        bc = GetComponent<CircleCollider2D>();
     }
 
     public void DealDamage(float damage)
     {
         health -= damage;
+        animator.Play("HitTree");
+        rb.bodyType = RigidbodyType2D.Static;
         CheckDeath();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -72,6 +83,12 @@ public class EnemyStats : MonoBehaviour
         {
             //Destroy(player);
             rb.bodyType = RigidbodyType2D.Static;
+            if (isAlive)
+            {
+                audioManager.PlaySFX(audioManager.enemyDeath);
+            }
+            isAlive = false;
+            
             anim.SetTrigger("death");
             Destroy(gameObject);
             // DEATH ANIMATION WILL CALL THE RESTART
@@ -88,4 +105,17 @@ public class EnemyStats : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
+    private void resetBody()
+    {
+        if (health > 0)
+            rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void CloseCol()
+    {
+        bc.enabled = false;
+    }
+
 }

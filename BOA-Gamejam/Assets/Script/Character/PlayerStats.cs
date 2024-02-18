@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
+    AudioManager audioManager;
     
     public GameObject player;
     
@@ -27,6 +28,9 @@ public class PlayerStats : MonoBehaviour
         anim = GetComponent<Animator>();
         bc = GetComponent<BoxCollider2D>();
         hm.SetMaxHealth((int)maxHealth);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        Debug.Log(audioManager.mainMusicLoop);
     }
 
     public void DealDamage(float damage)
@@ -63,6 +67,7 @@ public class PlayerStats : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("death");
+            audioManager.PlaySFX(audioManager.characterDeathOut);
             Shooting.isDead = true;
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();

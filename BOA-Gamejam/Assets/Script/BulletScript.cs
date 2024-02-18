@@ -7,11 +7,13 @@ public class BulletScript : MonoBehaviour
     private Vector3 mousePos;
     private Rigidbody2D rb;
     public float velocity;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
@@ -31,9 +33,18 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject && !collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            rb.bodyType = RigidbodyType2D.Static;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            animator.SetTrigger("Hit");
+
         }
         // for further usage: if the enemy sends a projectile, take this block of code to enemy and destroy projectile on hit
         //Destroy(gameObject);
+    }
+
+    private void DestroyPlayer()
+    {
+        Destroy(gameObject);
+        print("Dead");
     }
 }
