@@ -73,6 +73,7 @@ public class EnemyStats : MonoBehaviour
             //Destroy(player);
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("death");
+            Destroy(gameObject);
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
         }
