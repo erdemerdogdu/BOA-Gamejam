@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -883,7 +883,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1997324329}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 699934880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -900,7 +900,7 @@ Animator:
   m_GameObject: {fileID: 292404265}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e443d7a1e0d76a499a8af4a8f5a2923, type: 2}
+  m_Controller: {fileID: 9100000, guid: 67dc98a3478c854498cd6ec9a3b3195b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1161,6 +1161,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7910646170870668680, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1149482858}
+    - targetCorrespondingSourceObject: {fileID: 9098015430871103594, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 292404269}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
 --- !u!1001 &548218206
@@ -1779,6 +1782,11 @@ SpriteRenderer:
 --- !u!20 &699934877 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6691177796629629334, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
+  m_PrefabInstance: {fileID: 533012321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &699934880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9098015430871103594, guid: f8e2d6b6ae6045043a8d0e7d0aa08eec, type: 3}
   m_PrefabInstance: {fileID: 533012321}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &802131671
@@ -33140,7 +33148,8 @@ SceneRoots:
   - {fileID: 1711881221}
   - {fileID: 261532368}
   - {fileID: 1312723839}
-  - {fileID: 292404269}
   - {fileID: 1063954516}
   - {fileID: 8436391944492348339}
   - {fileID: 2086629511}
+  - {fileID: 1935333945}
+  - {fileID: 1644302754}
