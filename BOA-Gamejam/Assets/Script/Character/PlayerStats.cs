@@ -48,6 +48,7 @@ public class PlayerStats : MonoBehaviour
     public void DealDamage(float damage)
     {
         health -= damage;
+        print("health");
         CheckDeath();
     }
 

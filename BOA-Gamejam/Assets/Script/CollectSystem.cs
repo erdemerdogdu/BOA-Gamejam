@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class CollectSystem : MonoBehaviour
 {
+    public GameObject playerPrefab;
     [SerializeField] private CursorManager.CursorType cursorType;
     bool Pressed = false;
     int cnt = 0;
     [SerializeField]
     private GameObject player;
 
-    private float HoldStartTime;
+    private float HoldCurTime;
     float HoldTime;
 
     private void OnMouseDown()
     {
         Pressed = true;
-       HoldStartTime = Time.time;
-
-        print("PRessed" + cnt);
-        cnt++;
+        HoldTime = Time.time;
+        //playerPrefab.GetComponent<PlayerStats>().health += 10;
+        //DestroyEgg();
     }
 
     private void OnMouseUp()
@@ -48,8 +48,25 @@ public class CollectSystem : MonoBehaviour
     {
         if (Pressed)
         {
-            HoldStartTime = Time.time;
+            HoldTime += Time.deltaTime;
         }
+
+        if (!Pressed)
+        {
+            if(HoldCurTime > HoldTime)
+            {
+                HoldCurTime = 0;
+            }
+                
+            
+
+        }
+        
+        if(HoldCurTime < HoldTime)
+        {
+
+        }
+
     }
 
     private void DestroyEgg()
