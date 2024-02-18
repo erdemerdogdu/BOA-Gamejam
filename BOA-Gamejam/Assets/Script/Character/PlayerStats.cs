@@ -55,6 +55,7 @@ public class PlayerStats : MonoBehaviour
     
     private void CheckOverheal()
     {
+        hm.SetHealth((int)health);
         if (health > maxHealth)
         {
             health = maxHealth;
