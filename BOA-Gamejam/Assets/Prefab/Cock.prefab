@@ -205,7 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85e29d1520c11545ace56fed16666b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 743581447433917980}
   player: {fileID: 7841995507070377959}
   health: 0
   maxHealth: 30
   damageTaken: 15
+  isAlive: 1

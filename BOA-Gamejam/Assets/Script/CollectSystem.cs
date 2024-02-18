@@ -7,19 +7,26 @@ public class CollectSystem : MonoBehaviour
     public GameObject playerPrefab;
     [SerializeField] private CursorManager.CursorType cursorType;
     bool Pressed = false;
-    int cnt = 0;
-    [SerializeField]
-    private GameObject player;
 
-    private float HoldCurTime;
-    float HoldTime;
+    private GameObject player;
+    private float emptyChance;
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        this.player = GameObject.FindWithTag("Player");
+    }
 
     private void OnMouseDown()
     {
         Pressed = true;
-        HoldTime = Time.time;
-        //playerPrefab.GetComponent<PlayerStats>().health += 10;
-        //DestroyEgg();
+        emptyChance = Random.Range(0.0f, 1.0f);
+        anim.SetTrigger("Oppen");
+
+        
+        
+        
     }
 
     private void OnMouseUp()
@@ -38,40 +45,27 @@ public class CollectSystem : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (Pressed)
-        {
-            HoldTime += Time.deltaTime;
-        }
-
-        if (!Pressed)
-        {
-            if(HoldCurTime > HoldTime)
-            {
-                HoldCurTime = 0;
-            }
-                
-            
-
-        }
-        
-        if(HoldCurTime < HoldTime)
-        {
-
-        }
 
     }
 
     private void DestroyEgg()
     {
         CursorManager.Instance.SetActiveCursorType(CursorManager.CursorType.Aim);
+        if (emptyChance < 0.1f)
+        {
+            anim.SetBool("isEmpty", true);
+        }
+        else
+        {
+            anim.SetBool("isEmpty", false);
+            player.GetComponent<PlayerStats>().HealCharacter(50);
+
+        }
         Destroy(gameObject);
     }
 }
