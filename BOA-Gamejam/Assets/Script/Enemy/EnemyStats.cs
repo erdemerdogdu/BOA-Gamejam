@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyStats : MonoBehaviour
 {
     public static EnemyStats enemyStats;
-
+    public Animator animator;
     public GameObject player;
 
     public float health;
@@ -34,12 +34,17 @@ public class EnemyStats : MonoBehaviour
         health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        
     }
 
     public void DealDamage(float damage)
     {
         health -= damage;
+        animator.Play("HitTree");
+        rb.bodyType = RigidbodyType2D.Static;
         CheckDeath();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -86,5 +91,14 @@ public class EnemyStats : MonoBehaviour
     private void DestroyPlayer()
     {
         Destroy(gameObject);
+        print("Dead");
     }
+
+
+    private void resetBody()
+    {
+        if (health > 0)
+            rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+
 }

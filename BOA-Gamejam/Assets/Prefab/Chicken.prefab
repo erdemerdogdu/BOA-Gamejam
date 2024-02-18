@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 983431784667082306}
   - component: {fileID: 736052760726133922}
   - component: {fileID: 2904705331797686185}
+  - component: {fileID: 6203915943752774239}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -192,3 +193,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6203915943752774239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771963498294855005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e29d1520c11545ace56fed16666b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  health: 0
+  maxHealth: 10
+  damageTaken: 10
