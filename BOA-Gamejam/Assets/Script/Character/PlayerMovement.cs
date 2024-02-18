@@ -6,70 +6,61 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-    /* public float speed = 5f;
-    private Vector2 direction;
-    private Animator animator;
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-        TakeInput();
-        Move();
-    }
-
-    private void Move()
-    {
-        transform.Translate(direction * speed * Time.deltaTime);
-
-        if (direction.x != 0 || direction.y != 0)
-        {
-            SetAnimatorMovement(direction);
-        }
-        else
-        {
-            animator.SetLayerWeight(1, 0);
-        }
-    }
-
-    private void TakeInput()
-    {
-        direction = Vector2.zero;
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            direction += Vector2.up;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            direction += Vector2.left;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            direction += Vector2.down;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            direction += Vector2.right;
-        }
-    }
-
-    private void SetAnimatorMovement(Vector2 direction)
-    {
-        animator.SetLayerWeight(1, 1);
-        animator.SetFloat("xDir", direction.x);
-        animator.SetFloat("yDir", direction.y);
-    } */
-
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
     public Animator animator;
     
     Vector2 movement;
+
+    [Header("Blink Settings")] [SerializeField]
+    public float blinkDistance;
+    private float blinkTimer;
+    public float blinkTime;
+    bool facingRight;
+    bool facingUp;
+    private bool canBlink = true;
+
+    void Blink()
+    {
+        Vector3 blink;
+        if (facingRight)
+        {
+            blink = new Vector3(blinkDistance, 0, 0);
+        }
+        else
+        {
+            blink = new Vector3(-blinkDistance, 0, 0);
+        }
+        if (facingUp)
+        {
+            blink = new Vector3(0, blinkDistance, 0);
+        }
+        else
+        {
+            blink = new Vector3(0, -blinkDistance, 0);
+        }
+        if (facingUp && facingRight)
+        {
+            blink = new Vector3(blinkDistance, blinkDistance, 0);
+        }
+        else if(facingUp && !facingRight)
+        {
+            blink = new Vector3(-blinkDistance, blinkDistance, 0);
+        } 
+        else if(!facingUp && facingRight)
+        {
+            blink = new Vector3(blinkDistance, -blinkDistance, 0);
+        }
+        else if(!facingUp && !facingRight)
+        {
+            blink = new Vector3(-blinkDistance, -blinkDistance, 0);
+        }
+
+        transform.position += blink;
+    }
+    
+    
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -79,18 +70,47 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        /* if (animator.speed > 0.01)
+        if (Input.GetKeyDown(KeyCode.Space) && canBlink)
         {
-            animator.SetLayerWeight(1, 1);
+            animator.SetBool("Blink", true);
+            canBlink = false;
         }
         else
         {
-            animator.SetLayerWeight(1, 0);
-        } */
+            animator.SetBool("Blink", false);
+        }
+
+        if (!canBlink)
+        {
+            blinkTimer += Time.deltaTime;
+        }
+
+        if (blinkTimer > blinkTime)
+        {
+            canBlink = true;
+            blinkTimer = 0;
+        }
+        
+        if (movement.x >= 1)
+        {
+            facingRight = true;
+        }
+        else
+        {
+            facingRight = false;
+        }
+        if (movement.y >= 1)
+        {
+            facingUp = true;
+        }
+        else
+        {
+            facingUp = false;
+        }
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 }
