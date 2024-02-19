@@ -7,30 +7,38 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
+
     AudioManager audioManager;
-    
-    public GameObject player;
+    GameObject audioManagerObj;
+    HealthManager healthManager;
 
     public int killCnt;
     public int eggCnt;
-    public float health;
+    private float health;
     public float maxHealth;
     public float damageTaken;
+    public bool isAlive;
 
-    private Rigidbody2D rb;
-    private Animator anim;
-    private BoxCollider2D bc;
-
-    public HealthManager hm;
+    private Rigidbody2D rigitBody;
+    private Animator animator;
+    private BoxCollider2D boxCollider;
+    
 
     void Start()
     {
+        isAlive = true;
         health = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        bc = GetComponent<BoxCollider2D>();
-        hm.SetMaxHealth((int)maxHealth);
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        rigitBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        healthManager.SetMaxHealth((int)maxHealth);
+        audioManagerObj = GameObject.FindGameObjectWithTag("Audio");
+        if(audioManagerObj != null)
+        {
+            audioManager = audioManagerObj.GetComponent<AudioManager>();
+        }
+        
     }
 
     public void DealDamage(float damage)
@@ -55,7 +63,7 @@ public class PlayerStats : MonoBehaviour
     
     private void CheckOverheal()
     {
-        hm.SetHealth((int)health);
+        healthManager.SetHealth((int)health);
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -64,30 +72,27 @@ public class PlayerStats : MonoBehaviour
 
     private void CheckDeath()
     {
+        healthManager.SetHealth((int)health);
         if (health <= 0)
         {
-            rb.bodyType = RigidbodyType2D.Static;
-            anim.SetTrigger("death");
+            rigitBody.bodyType = RigidbodyType2D.Static;
+            isAlive = false;
+            animator.SetTrigger("death");
             audioManager.PlaySFX(audioManager.characterDeathOut);
             Shooting.isDead = true;
-            // DEATH ANIMATION WILL CALL THE RESTART
-            // RestartLevel();
-            hm.SetHealth((int)health);
-        }
-        else
-        {
-            hm.SetHealth((int)health);
         }
     }
 
+    // Used by animator
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    // Used by animator
     private void CloseCol()
     {
-        bc.enabled = false;
+        boxCollider.enabled = false;
     }
 
 }

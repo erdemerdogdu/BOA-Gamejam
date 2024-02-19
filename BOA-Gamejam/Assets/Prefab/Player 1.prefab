@@ -195,12 +195,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7910646170870668680}
+  - component: {fileID: 5677431469234518670}
+  - component: {fileID: 5763933633287810962}
   - component: {fileID: -713686243462805513}
   - component: {fileID: 8189916014714030148}
-  - component: {fileID: 5763933633287810962}
   - component: {fileID: 6729348267975469438}
   - component: {fileID: 1224064875917337071}
-  - component: {fileID: 5677431469234518670}
   m_Layer: 6
   m_Name: Player 1
   m_TagString: Player
@@ -226,6 +226,40 @@ Transform:
   - {fileID: 5786800249988142005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5677431469234518670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5637976885347237185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945341198b798c3418d15f9782841cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killCnt: 0
+  eggCnt: 0
+  maxHealth: 100
+  damageTaken: 10
+  isAlive: 1
+--- !u!114 &5763933633287810962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5637976885347237185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b1ffafe80ec5744b863eaf0bbebfac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rb: {fileID: 8189916014714030148}
+  animator: {fileID: 1224064875917337071}
+  blinkDistance: 4
+  blinkTime: 2
 --- !u!212 &-713686243462805513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -305,23 +339,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5763933633287810962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5637976885347237185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b1ffafe80ec5744b863eaf0bbebfac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  rb: {fileID: 8189916014714030148}
-  animator: {fileID: 1224064875917337071}
-  blinkDistance: 4
-  blinkTime: 2
 --- !u!61 &6729348267975469438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -388,23 +405,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5677431469234518670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5637976885347237185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945341198b798c3418d15f9782841cd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5637976885347237185}
-  health: 0
-  maxHealth: 100
-  damageTaken: 10
-  hm: {fileID: 5333115782475334256, guid: 6fae509a95a17764b9e900325ba3055d, type: 3}
 --- !u!1 &7662289781124169118
 GameObject:
   m_ObjectHideFlags: 0
