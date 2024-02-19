@@ -10,10 +10,12 @@ public class CollectSystem : MonoBehaviour
     private GameObject player;
     private float emptyChance;
     private Animator anim;
+    private PlayerStats playerStats;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         this.player = GameObject.FindWithTag("Player");
     }
 
@@ -22,10 +24,7 @@ public class CollectSystem : MonoBehaviour
         Pressed = true;
         emptyChance = Random.Range(0.0f, 1.0f);
         anim.SetTrigger("Oppen");
-
-        
-        
-        
+        playerStats.eggCnt++;
     }
 
     private void OnMouseUp()
