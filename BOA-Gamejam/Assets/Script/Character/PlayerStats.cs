@@ -10,7 +10,9 @@ public class PlayerStats : MonoBehaviour
     AudioManager audioManager;
     
     public GameObject player;
-    
+
+    public int killCnt;
+    public int eggCnt;
     public float health;
     public float maxHealth;
     public float damageTaken;
@@ -29,8 +31,6 @@ public class PlayerStats : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         hm.SetMaxHealth((int)maxHealth);
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-
-        Debug.Log(audioManager.mainMusicLoop);
     }
 
     public void DealDamage(float damage)
@@ -71,7 +71,7 @@ public class PlayerStats : MonoBehaviour
             audioManager.PlaySFX(audioManager.characterDeathOut);
             Shooting.isDead = true;
             // DEATH ANIMATION WILL CALL THE RESTART
-            //RestartLevel();
+            // RestartLevel();
             hm.SetHealth((int)health);
         }
         else

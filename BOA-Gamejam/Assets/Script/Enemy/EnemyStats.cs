@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyStats : MonoBehaviour
 {
     public static EnemyStats enemyStats;
-    public Animator animator;
-    public GameObject player;
+    private PlayerStats playerStats;
 
     AudioManager audioManager;
     private CircleCollider2D bc;
@@ -24,9 +23,9 @@ public class EnemyStats : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        animator = GetComponent<Animator>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         bc = GetComponent<CircleCollider2D>();
     }
@@ -34,7 +33,7 @@ public class EnemyStats : MonoBehaviour
     public void DealDamage(float damage)
     {
         health -= damage;
-        animator.Play("HitTree");
+        anim.Play("HitTree");
         rb.bodyType = RigidbodyType2D.Static;
         CheckDeath();
         
@@ -75,7 +74,7 @@ public class EnemyStats : MonoBehaviour
                 audioManager.PlaySFX(audioManager.enemyDeath);
             }
             isAlive = false;
-            
+            playerStats.killCnt++;
             anim.SetTrigger("death");
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
