@@ -70,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
+        // Add blink animator.
+        /*
         if (Input.GetKeyDown(KeyCode.Space) && canBlink)
         {
             animator.SetBool("Blink", true);
@@ -79,18 +81,16 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Blink", false);
         }
-
+        */
         if (!canBlink)
         {
             blinkTimer += Time.deltaTime;
         }
-
         if (blinkTimer > blinkTime)
         {
             canBlink = true;
             blinkTimer = 0;
         }
-        
         if (movement.x >= 1)
         {
             facingRight = true;
@@ -111,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(rigidBody.bodyType);
         rigidBody.MovePosition(rigidBody.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 }
