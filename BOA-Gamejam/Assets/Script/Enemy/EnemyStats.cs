@@ -10,6 +10,7 @@ public class EnemyStats : MonoBehaviour
 
     AudioManager audioManager;
     private CircleCollider2D bc;
+    EnemyAI ea;
 
     public float health;
     public float maxHealth;
@@ -22,6 +23,7 @@ public class EnemyStats : MonoBehaviour
     
     void Start()
     {
+        ea = GetComponent<EnemyAI>;
         health = maxHealth;
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
@@ -68,7 +70,8 @@ public class EnemyStats : MonoBehaviour
         if (health <= 0)
         {
             //Destroy(player);
-            rb.bodyType = RigidbodyType2D.Static;
+            //rb.bodyType = RigidbodyType2D.Static;
+            this.GetComponent<EnemyAI>.speed = 0;
             if (isAlive)
             {
                 audioManager.PlaySFX(audioManager.enemyDeath);

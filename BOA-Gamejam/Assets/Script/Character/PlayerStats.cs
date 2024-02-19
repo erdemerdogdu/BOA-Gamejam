@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     public float damageTaken;
     public bool isAlive;
 
-    private Rigidbody2D rigitBody;
+    private Rigidbody2D rigidBody;
     private Animator animator;
     private BoxCollider2D boxCollider;
     
@@ -29,7 +29,7 @@ public class PlayerStats : MonoBehaviour
         isAlive = true;
         health = maxHealth;
 
-        rigitBody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         healthManager.SetMaxHealth((int)maxHealth);
@@ -75,7 +75,8 @@ public class PlayerStats : MonoBehaviour
         healthManager.SetHealth((int)health);
         if (health <= 0)
         {
-            rigitBody.bodyType = RigidbodyType2D.Static;
+            //rigidBody.bodyType = RigidbodyType2D.Static;
+            PlayerMovement.moveSpeed = 0;
             isAlive = false;
             animator.SetTrigger("death");
             audioManager.PlaySFX(audioManager.characterDeathOut);
