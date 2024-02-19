@@ -8,35 +8,48 @@ public class LevelChanger : MonoBehaviour
 {
     public int eggCntToEnd = -1;
     public int killCntToEnd = -1;
-    public Animator animator;
     private int levelToLoad;
+
+    public Animator animator;
+    private GameObject player;
     private PlayerStats playerStats;
 
     private void Start()
     {
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        if(player != null)
+        {
+            playerStats = player.GetComponent<PlayerStats>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerStats != null)
+        if(player != null && playerStats != null)
         {
+            // If player coolects eggs
             if(playerStats.eggCnt == eggCntToEnd)
             {
-                FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+                FadeToNextLevel();
             }
+            // If player kills enough
             else if (playerStats.killCnt == killCntToEnd)
             {
-                if(SceneManager.GetActiveScene().buildIndex + 1 == SceneManager.sceneCountInBuildSettings)
-                {
-                    FadeToLevel(0);
-                }
-                else
-                {
-                    FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
-                }
+                FadeToNextLevel();
             }
+        }
+    }
+
+    public void FadeToNextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex + 1 == SceneManager.sceneCountInBuildSettings)
+        {
+            FadeToLevel(0);
+        }
+        else
+        {
+            FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
