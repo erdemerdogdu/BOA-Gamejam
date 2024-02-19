@@ -320,6 +320,8 @@ MonoBehaviour:
   moveSpeed: 10
   rb: {fileID: 8189916014714030148}
   animator: {fileID: 1224064875917337071}
+  blinkDistance: 4
+  blinkTime: 2
 --- !u!61 &6729348267975469438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,8 +402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5637976885347237185}
   health: 0
-  maxHealth: 0
-  damageTaken: 0
+  maxHealth: 100
+  damageTaken: 10
+  hm: {fileID: 5333115782475334256, guid: 6fae509a95a17764b9e900325ba3055d, type: 3}
 --- !u!1 &7662289781124169118
 GameObject:
   m_ObjectHideFlags: 0
