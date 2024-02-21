@@ -49,10 +49,10 @@ MonoBehaviour:
   musicSource: {fileID: 4572096911906049142}
   SFXSource: {fileID: 5375461193773432235}
   mainMusic: {fileID: 8300000, guid: c1e0ee86f1e10d646a2da1b504a8da59, type: 3}
-  music30s: {fileID: 8300000, guid: adae4d7bb7c66924693fdcd8b60b26d7, type: 3}
+  music30s: {fileID: 8300000, guid: c1e0ee86f1e10d646a2da1b504a8da59, type: 3}
   mainMusicLoop: {fileID: 8300000, guid: 4fac1567018e7ef4c90a5b75d696dffb, type: 3}
   characterDeathIn: {fileID: 8300000, guid: ec598e46327a31a4a93b9d621ee5e36d, type: 3}
-  characterDeathOut: {fileID: 8300000, guid: e1554dcef54f31447a713d77531ce1ed, type: 3}
+  characterDeathOut: {fileID: 8300000, guid: 8e1a8996029acfd4dbf1d9fdb0c5c1db, type: 3}
   enemyDeath: {fileID: 8300000, guid: f2f7b944ac13a5c4d95aabd7cae12013, type: 3}
 --- !u!1 &6081397552360535286
 GameObject:

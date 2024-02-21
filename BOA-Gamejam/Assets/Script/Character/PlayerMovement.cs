@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public static float moveSpeed = 5f;
 
-    public Rigidbody2D rb;
+    public Rigidbody2D rigidBody;
     public Animator animator;
     
     Vector2 movement;
@@ -64,12 +64,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw(("Vertical"));
+        movement.y = Input.GetAxisRaw("Vertical");
         
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
+        // Add blink animator.
+        /*
         if (Input.GetKeyDown(KeyCode.Space) && canBlink)
         {
             animator.SetBool("Blink", true);
@@ -79,18 +81,16 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Blink", false);
         }
-
+        */
         if (!canBlink)
         {
             blinkTimer += Time.deltaTime;
         }
-
         if (blinkTimer > blinkTime)
         {
             canBlink = true;
             blinkTimer = 0;
         }
-        
         if (movement.x >= 1)
         {
             facingRight = true;
@@ -111,6 +111,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        rigidBody.MovePosition(rigidBody.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 }
