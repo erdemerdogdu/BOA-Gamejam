@@ -6,42 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static PlayerStats playerStats;
-
-    AudioManager audioManager;
-    GameObject audioManagerObj;
-    HealthManager healthManager;
+    public GameObject player;
 
     public int killCnt;
     public int eggCnt;
-    private float health;
+    public float health;
     public float maxHealth;
     public float damageTaken;
-    public bool isAlive;
 
-    private Rigidbody2D rigidBody;
-    private Animator animator;
-    private BoxCollider2D boxCollider;
-    
+    private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
+    private BoxCollider2D _boxCollider2D;
+    private PlayerMovement _playerMovement;
+    private AudioManager _audioManager;
+    private HealthManager _healthManager;
 
-    void Start()
+    private void Start()
     {
-        isAlive = true;
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _boxCollider2D = GetComponent<BoxCollider2D>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _healthManager.SetMaxHealth((int)maxHealth);
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         health = maxHealth;
-
-        rigidBody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        healthManager.SetMaxHealth((int)maxHealth);
-        audioManagerObj = GameObject.FindGameObjectWithTag("Audio");
-        if(audioManagerObj != null)
-        {
-            audioManager = audioManagerObj.GetComponent<AudioManager>();
-        }
-        
     }
 
-    public void DealDamage(float damage)
+    private void DealDamage(float damage)
     {
         health -= damage;
         CheckDeath();
@@ -63,7 +54,7 @@ public class PlayerStats : MonoBehaviour
     
     private void CheckOverheal()
     {
-        healthManager.SetHealth((int)health);
+        _healthManager.SetHealth((int)health);
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -72,28 +63,32 @@ public class PlayerStats : MonoBehaviour
 
     private void CheckDeath()
     {
-        healthManager.SetHealth((int)health);
         if (health <= 0)
         {
-            //rigidBody.bodyType = RigidbodyType2D.Static;
-            PlayerMovement.moveSpeed = 0;
-            isAlive = false;
-            animator.SetTrigger("death");
-            audioManager.PlaySFX(audioManager.characterDeathOut);
+            _playerMovement.moveSpeed = 0;
+            _playerMovement.canBlink = false;
+            _playerMovement.blinkTime = 10;
+            _animator.SetTrigger("death");
+            _audioManager.PlaySFX(_audioManager.characterDeathOut);
             Shooting.isDead = true;
+            // DEATH ANIMATION WILL CALL THE RESTART
+            // RestartLevel();
+            _healthManager.SetHealth((int)health);
+        }
+        else
+        {
+            _healthManager.SetHealth((int)health);
         }
     }
 
-    // Used by animator
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Used by animator
     private void CloseCol()
     {
-        boxCollider.enabled = false;
+        _boxCollider2D.enabled = false;
     }
 
 }

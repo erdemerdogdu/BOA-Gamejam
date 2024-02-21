@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float blinkTime;
     bool facingRight;
     bool facingUp;
-    private bool canBlink = true;
+    public bool canBlink = true;
 
     void Blink()
     {
