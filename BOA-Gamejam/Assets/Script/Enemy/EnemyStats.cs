@@ -5,38 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class EnemyStats : MonoBehaviour
 {
-    public static EnemyStats enemyStats;
-    private PlayerStats playerStats;
-
-    AudioManager audioManager;
-    private CircleCollider2D bc;
-
     public float health;
     public float maxHealth;
     public float damageTaken;
-
     public bool isAlive = true;
+    public float assignedSpeed;
 
-    private Rigidbody2D rb;
-    private Animator anim;
+    private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
+    private CircleCollider2D _circleCollider2D;
+    private EnemyAI _enemyAI;
+    private PlayerStats _playerStats;
+    private AudioManager _audioManager;
     
-    void Start()
+    private void Start()
     {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _circleCollider2D = GetComponent<CircleCollider2D>();
+        _enemyAI = GetComponent<EnemyAI>();
+        _playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         health = maxHealth;
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        bc = GetComponent<CircleCollider2D>();
+        assignedSpeed = _enemyAI.speed;
     }
 
-    public void DealDamage(float damage)
+    private void DealDamage(float damage)
     {
         health -= damage;
-        anim.Play("HitTree");
-        rb.bodyType = RigidbodyType2D.Static;
+        _animator.Play("HitTree");
+        _enemyAI.speed = 0;
         CheckDeath();
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,37 +44,20 @@ public class EnemyStats : MonoBehaviour
         {
             DealDamage(damageTaken);
         }
-        // for further usage: if the enemy sends a projectile, take this block of code to enemy and destroy projectile on hit
-        //Destroy(gameObject);
-    }
-
-    public void HealCharacter(float heal)
-    {
-        health += heal;
-        CheckOverheal();
-    }
-
-    private void CheckOverheal()
-    {
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
     }
 
     private void CheckDeath()
     {
         if (health <= 0)
         {
-            //Destroy(player);
-            rb.bodyType = RigidbodyType2D.Static;
+            _enemyAI.speed = 0;
             if (isAlive)
             {
-                audioManager.PlaySFX(audioManager.enemyDeath);
+                _audioManager.PlaySFX(_audioManager.enemyDeath);
             }
             isAlive = false;
-            playerStats.killCnt++;
-            anim.SetTrigger("death");
+            _playerStats.killCnt++;
+            _animator.SetTrigger("death");
             // DEATH ANIMATION WILL CALL THE RESTART
             //RestartLevel();
         }
@@ -90,17 +72,14 @@ public class EnemyStats : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
-    private void resetBody()
-    {
-        if (health > 0)
-            rb.bodyType = RigidbodyType2D.Dynamic;
-    }
-
+    
     private void CloseCol()
     {
-        bc.enabled = false;
+        _circleCollider2D.enabled = false;
     }
 
+    private void returnAssignedSpeed()
+    {
+        _enemyAI.speed = assignedSpeed;
+    }
 }

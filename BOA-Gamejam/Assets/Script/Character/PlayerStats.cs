@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static PlayerStats playerStats;
-    AudioManager audioManager;
-    
     public GameObject player;
 
     public int killCnt;
@@ -17,23 +14,25 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth;
     public float damageTaken;
 
-    private Rigidbody2D rb;
-    private Animator anim;
-    private BoxCollider2D bc;
+    private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
+    private BoxCollider2D _boxCollider2D;
+    private PlayerMovement _playerMovement;
+    private AudioManager _audioManager;
+    private HealthManager _healthManager;
 
-    public HealthManager hm;
-
-    void Start()
+    private void Start()
     {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _boxCollider2D = GetComponent<BoxCollider2D>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _healthManager.SetMaxHealth((int)maxHealth);
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         health = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        bc = GetComponent<BoxCollider2D>();
-        hm.SetMaxHealth((int)maxHealth);
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    public void DealDamage(float damage)
+    private void DealDamage(float damage)
     {
         health -= damage;
         CheckDeath();
@@ -55,7 +54,7 @@ public class PlayerStats : MonoBehaviour
     
     private void CheckOverheal()
     {
-        hm.SetHealth((int)health);
+        _healthManager.SetHealth((int)health);
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -66,17 +65,19 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            rb.bodyType = RigidbodyType2D.Static;
-            anim.SetTrigger("death");
-            audioManager.PlaySFX(audioManager.characterDeathOut);
+            _playerMovement.moveSpeed = 0;
+            _playerMovement.canBlink = false;
+            _playerMovement.blinkTime = 10;
+            _animator.SetTrigger("death");
+            _audioManager.PlaySFX(_audioManager.characterDeathOut);
             Shooting.isDead = true;
             // DEATH ANIMATION WILL CALL THE RESTART
             // RestartLevel();
-            hm.SetHealth((int)health);
+            _healthManager.SetHealth((int)health);
         }
         else
         {
-            hm.SetHealth((int)health);
+            _healthManager.SetHealth((int)health);
         }
     }
 
@@ -87,7 +88,7 @@ public class PlayerStats : MonoBehaviour
 
     private void CloseCol()
     {
-        bc.enabled = false;
+        _boxCollider2D.enabled = false;
     }
 
 }
